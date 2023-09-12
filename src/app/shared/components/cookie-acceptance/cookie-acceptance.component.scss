@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #cecece;
+  font-size: 14px;
+}
+
+.cookies-card {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  z-index: 10001;
+  box-shadow: 0px 4px 13px rgb(0 0 0 / 24%);
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: color 0.4s;
+  }
+  .row {
+    max-width: 813px;
+    margin: 0 auto;
+    padding: 1.5em;
+    align-items: center;
+    @media (max-width: 767px) {
+      padding: 0.5em;
+    }
+    .info {
+      line-height: 27px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .title {
+      font-size: 20px;
+      margin-bottom: 0.5em;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      text-align: left;
+    }
+    .action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mat-card-actions {
+        margin: 0;
+        @media (max-width: 767px) {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          column-gap: 10px;
+          margin-top: 10px;
+        }
+      }
+
+      .decline {
+        color: #1a82dd;
+        cursor: pointer;
+        height: 38px;
+        width: 77px;
+        border-radius: 6px;
+        margin: 22px;
+        border-color: #1a82dd;
+      }
+    }
+  }
+}
+.cta {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.8em 1.5em;
+  background-color: #007acc;
+  font-weight: bold;
+  cursor: pointer;
+  color: white !important;
+
+  &:hover {
+    background-color: #005f99;
+  }
+}
+
+a.cookiesLink {
+  color: #1a82dd !important;
+  font-weight: bold;
+  &:hover {
+    color: #1a82dd !important;
+  }
+}
+.mdc-card__actions {
+  display: block !important;
+}

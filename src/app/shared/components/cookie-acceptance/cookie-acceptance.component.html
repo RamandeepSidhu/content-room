@@ -1,0 +1,22 @@
+<div class="cookies-card" *ngIf="!isCookies" [@fadeInOut]>
+    <mat-card>
+        <div class="row">
+            <div class="col-md-10">
+                <p class="title">Your Privacy</p>
+                <p class="info"> We use cookies to enhance your experience on our site and to show you relevant
+                    advertising. <br /> To learn more, please read our <a class="cookiesLink privacy"
+                        href="{{ dashboard_url }}/privacy">Privacy Policy</a> and <a class="cookiesLink"
+                        href="{{ dashboard_url }}/cookie-policy">Cookie Policy</a>. </p>
+            </div>
+            <div class="col-md-2">
+                <div class="action-btn">
+                    <mat-card-actions>
+                        <button class="cta" (click)="setCookiesData()">Accept</button>
+                        <button class="decline" (click)="modalClosed()" (keydown.enter)="modalClosed()"
+                            tabindex="0">Decline</button>
+                    </mat-card-actions>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
